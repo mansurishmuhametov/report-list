@@ -1,0 +1,23 @@
+<div class="page-bg page-bg_white components">
+    <div class="container">   
+        <div class="row space_outer_b_sm space_inner_t_sm">
+            <div class="col-12 components__crumbs_title-form">
+                <crumbs_title-form Level="h2">
+                    {{ 'header.reportList' | translate }}
+                </crumbs_title-form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="grid-templates grid-templates_left-bar border-top">
+                    <div class="grid-templates__column">
+                        <crumbs_navigation-list-form [LinkList]="NavigationLinkList"></crumbs_navigation-list-form>
+                    </div>
+                    <div class="grid-templates__column border-left padding-sm">
+                        <router-outlet></router-outlet>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

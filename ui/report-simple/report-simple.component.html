@@ -1,0 +1,25 @@
+<div class="report">
+    <div class="row margin-bottom-sm">
+        <div class="col-12">
+            <retail_filters-form
+                [Periods]="PeriodList"
+                [Metrics]="MetricListForFilter"
+                [Entities]="EntityListForFilter"
+                [Settings]="FilterSetting"
+                (Accept)="onAcceptFilter($event)"
+                (ResetStorage)="resetFilterState()">
+            </retail_filters-form>
+        </div>
+    </div>
+    <atoms_button-ui Type="primary"
+        (click)="unloadReport()"
+        [Disabled]="IsReportInProgress || !IsValid">
+        {{ 'button.unload' | translate }}
+    </atoms_button-ui>
+    <atoms_divider-form></atoms_divider-form> 
+    <div class="row margin-top-xs">
+        <div class="col-12">
+            <img src="assets/img/report/base-report.png" class="report__image" alt="Report Base">
+        </div>
+    </div>
+</div>
